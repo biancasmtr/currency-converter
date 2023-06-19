@@ -1,0 +1,76 @@
+<header class="header">
+  <h1 class="title">Conversor de Moedas</h1>
+</header>
+<div class="converter-container container">
+
+  <!-- Seção com valores fixos -->
+  <div class="fixed-currencies">
+    <h2>Cotação atual</h2>
+
+    <div class="currency-container">
+      <div class="currency">
+        <label>Dólar Canadense (CAD)</label>
+        <span class="value">{{ fixedCadValue | currency: 'BRL' }}</span>
+      </div>
+
+      <div class="currency">
+        <label>Peso Argentino (ARS)</label>
+        <span class="value">{{ fixedArsValue | currency: 'BRL' }}</span>
+      </div>
+
+      <div class="currency">
+        <label>Libra Esterlina (GBP)</label>
+        <span class="value">{{ fixedGbpValue | currency: 'BRL' }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="conversor">
+    <div class="convert">
+      <h2>Realizar conversão</h2>
+      <div class="conversion-input">
+        <span class="currency-symbol">R$</span>
+        <input type="number" [(ngModel)]="brlValue" placeholder="Insira o valor para fazer a conversão">
+        <button (click)="convertToCurrency()" [disabled]="brlValue === 1">Converter</button>
+      </div>
+  
+      <div class="message" *ngIf="brlValue === 1">
+        O valor de 1 Real já está fixado no topo da tela.
+      </div>
+    </div>
+
+    <!-- Moedas dinâmicas -->
+    <div class="converter-container container">
+      <h3>Resultado da conversão</h3>
+      <div class="currency-container">
+        <div class="currency" [ngStyle]="{'color': getCurrencyColor(cadValue)}">
+          <label class="valores">Dólar Canadense (CAD)</label>
+          <span class="value">{{ cadValue | currency: 'BRL' }}</span>
+        </div>
+
+        <div class="currency" [ngStyle]="{'color': getCurrencyColor(arsValue)}">
+          <label class="valores">Peso Argentino (ARS)</label>
+          <span class="value">{{ arsValue | currency: 'BRL' }}</span>
+        </div>
+
+        <div class="currency" [ngStyle]="{'color': getCurrencyColor(gbpValue)}">
+          <label class="valores">Libra Esterlina (GBP)</label>
+          <span class="value">{{ gbpValue | currency: 'BRL' }}</span>
+        </div>
+      </div>
+      <div class="variation">
+        Variação: {{ variation | percent }}
+      </div>
+    
+      <div class="last-update">
+        Última Atualização: {{ lastUpdate | date: 'dd/MM/yyyy HH:mm:ss' }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="foo">
+    © Frete Rápido - Todos os direitos reservados
+  </div>
+</footer>
