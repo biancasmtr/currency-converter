@@ -16,7 +16,7 @@ Você pode configurar este projeto usando gerenciadores de pacotes npm ou yarn.
 ## Clonar repositório
 
 ``` 
-[https://github.com/biancasmtr/project-idinheiro.git](https://github.com/biancasmtr/currency-converter)
+https://github.com/biancasmtr/currency-converter
 ```
 
 ## Navegue até o repositório clonado
