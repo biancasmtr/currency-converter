@@ -40,4 +40,3 @@ ng serve
 ```
 
 Abra http://localhost:4200 com seu navegador para ver o resultado.
-
