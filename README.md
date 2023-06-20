@@ -1,27 +1,43 @@
-# ConverterToReal
+# Projeto Conversor de moedas - com [Angular CLI](https://github.com/angular/angular-cli) versão 16.1.0.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+O projeto consiste em um site simples onde apresenta informações de conversão de moedas, sendo exibidas as informações do valor de R$1 (BRL) para as seguintes 3 moedas: Dólar Canadense (CAD), Peso Argentino (ARS) e Libra Esterlina (GBP). Os valores são recuperados através da [Awsome API](https://docs.awesomeapi.com.br/api-de-moedas). São exibidos na tela as informações de valor da moeda, variação e último horário de atualização.
+Os dados são salvos em cache no localStorage por 3 minutos e a página atualiza as informações também a cada 3 minutos.
 
-## Development server
+O projeto foi criado em Angular 16. Os testes foram realizados com Cypress e estilisado com SCSS.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Antes de começar
 
-## Code scaffolding
+Certifique-se de ter instalado o Node.js 12.22.0 ou superior em sua máquina. Você pode usar o nvm para gerenciar várias versões de nós em sua máquina.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Começando
 
-## Build
+Você pode configurar este projeto usando gerenciadores de pacotes npm ou yarn.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Clonar repositório
 
-## Running unit tests
+``` 
+[https://github.com/biancasmtr/project-idinheiro.git](https://github.com/biancasmtr/currency-converter)
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Navegue até o repositório clonado
 
-## Running end-to-end tests
+``` 
+cd currency-converter
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Instalar dependências
 
-## Further help
+``` 
+yarn install
+#or
+npm install
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Iniciar servidor de desenvolvimento
+
+``` 
+ng serve
+```
+
+Abra http://localhost:4200 com seu navegador para ver o resultado.
+
